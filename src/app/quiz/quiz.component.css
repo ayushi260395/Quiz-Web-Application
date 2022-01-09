@@ -1,0 +1,26 @@
+.container
+{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    margin-left: 550px;
+}
+ul
+{
+    border: 1px solid black;
+    text-decoration: none;
+    width: 30%;
+    list-style-type: none;
+}
+li{
+    text-decoration: none;
+}
+h1{
+    text-align: left;
+}
+button{
+    background-color: green;
+    width: 200px;
+    font-size: 20px;
+    color: aliceblue;
+}

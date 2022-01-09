@@ -1,0 +1,41 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <!-- <h3>Login Form</h3> -->
+    <div class="container justify-content-center">
+        <h3>Login Form</h3>
+        <div class="form-group">
+            <label for="loginUsername" 
+                class="form-label">Username</label><br>
+            <input type="text" 
+                name="username" 
+                ngModel required #login.username="ngModel" 
+                class="form-control" 
+                id="loginUsername" 
+                placeholder="Enter Username"><br><br>
+                    <!-- <p>username value: {{ username.value }}</p>
+                    <p>username valid: {{ username.valid }}</p>
+                    <p>username dirty: {{ username.dirty }}</p>
+                    <p>username touched: {{ username.touched }}</p> -->
+        </div>
+        <div class="form-group">
+            <label for="password" 
+                   class="form-label">Password</label><br>
+            <input type="password" 
+                   name="password" 
+                   ngModel required #login.password="ngModel" 
+                   class="form-control" i
+                   d="password" 
+                   placeholder="Enter Password"><br><br>
+                   <!-- <p>password value: {{ password.value }}</p>
+                   <p>password valid: {{ password.valid }}</p>
+                   <p>password dirty: {{ password.dirty }}</p>
+                   <p>password touched: {{ password.touched }}</p> -->
+            </div>
+            <div class="form-group">
+                <a [routerLink]="['/reset-password']">Forgot Password</a><br>
+            </div>
+            <button type="submit" 
+                    [routerLink]="['/quiz']"
+                    [disabled]="f.invalid" 
+                    class="btn">Login</button>
+    </div>
+</form>
